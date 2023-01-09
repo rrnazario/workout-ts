@@ -1,4 +1,4 @@
-import Entity from "../seedwork/entity.seedwork";
+import { Entity } from "../seedwork";
 
 export class Exercise extends Entity {
     constructor(

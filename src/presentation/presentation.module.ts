@@ -4,10 +4,10 @@ import { ApplicationModule } from "src/application";
 import { ExerciseController } from "./controllers";
 
 @Module({
-    imports:[
+    imports: [
         CqrsModule,
         ApplicationModule
     ],
-    controllers:[ExerciseController]
+    controllers: [ExerciseController]
 })
-export class PresentationModule{}
+export class PresentationModule { }

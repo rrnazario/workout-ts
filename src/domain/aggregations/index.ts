@@ -1,1 +1,5 @@
 export * from './exercise.aggregation'
+export * from './trainer.aggregation'
+export * from './trainee.aggregation'
+export * from './serie.aggregation'
+export * from './sheet.aggregation'
