@@ -1,6 +1,6 @@
 import { Module } from "@nestjs/common";
 import { DomainModule } from "src/domain/domain.module";
-import { ExerciseGetAllQueryHandler } from "./handlers/exercise-getall-queryhandler";
+import { ExerciseGetAllQueryHandler } from "./handlers";
 import { ExerciseGetAllQuery, ExerciseGetAllQueryResponse } from "./queries";
 
 @Module({
