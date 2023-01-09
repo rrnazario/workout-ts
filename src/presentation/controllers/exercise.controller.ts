@@ -1,7 +1,7 @@
 import { Controller, Get } from '@nestjs/common';
 import { CommandBus } from '@nestjs/cqrs/dist/command-bus';
 import { QueryBus } from '@nestjs/cqrs/dist/query-bus';
-import { ExerciseGetAllQuery, ExerciseGetAllQueryResponse } from 'src/application/queries/exercise-getall.query';
+import { ExerciseGetAllQuery, ExerciseGetAllQueryResponse } from 'src/application/queries';
 
 @Controller('exercise')
 export class ExerciseController {
