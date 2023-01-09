@@ -1,4 +1,4 @@
-import Exercise from "src/domain/aggregations/exercise.aggregation";
+import { Exercise } from "src/domain/aggregations";
 
 export class ExerciseGetAllQuery { }
 

@@ -1,3 +1,3 @@
 export default abstract class Entity {
-    public id: number;
+    public id: number = Math.floor(Math.random() * 100);
 }

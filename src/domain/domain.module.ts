@@ -1,5 +1,5 @@
 import { Module } from "@nestjs/common";
-import Exercise from "./aggregations/exercise.aggregation";
+import { Exercise } from "./aggregations";
 
 @Module({
     providers:[Exercise]

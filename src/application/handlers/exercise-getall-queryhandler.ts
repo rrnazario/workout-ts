@@ -1,6 +1,6 @@
 import { QueryHandler } from "@nestjs/cqrs";
 import { IQueryHandler } from "@nestjs/cqrs/dist";
-import Exercise from "src/domain/aggregations/exercise.aggregation";
+import { Exercise } from "src/domain/aggregations";
 import { ExerciseGetAllQuery, ExerciseGetAllQueryResponse } from "../queries/exercise-getall.query";
 
 @QueryHandler(ExerciseGetAllQuery)
