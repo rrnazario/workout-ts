@@ -2,8 +2,14 @@ import { Exercise } from "src/domain/aggregations";
 
 export class ExerciseGetAllQuery { }
 
-export class ExerciseGetAllQueryResponse {
+export class ExerciseGetAllResponse {
+    name:string;
+    description: string;
+
     constructor(
-        public readonly exercises: Exercise[]
-    ){}
+        exercise?: Exercise
+    ){
+        this.name = exercise?.name ?? ''
+        this.description = exercise?.description ?? ''
+    }
 }
