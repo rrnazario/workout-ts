@@ -1,7 +1,9 @@
 import { Controller, Get, UseFilters, UseInterceptors } from '@nestjs/common';
-import { CommandBus } from '@nestjs/cqrs/dist/command-bus';
+import { Param, Post } from '@nestjs/common/decorators';
 import { QueryBus } from '@nestjs/cqrs/dist/query-bus';
-import { ExerciseGetAllQuery, ExerciseGetAllResponse } from 'src/application/queries';
+import { ExerciseResponse } from 'src/application/dtos';
+import { ExerciseGetAllQuery } from 'src/application/queries';
+import { ExerciseGetByIdQuery } from 'src/application/queries/exercise-getbyid.query';
 import { ErrorFilter } from 'src/infra/filters/error.filter';
 import { LogInterceptor } from 'src/infra/interceptors/log.interceptor';
 
@@ -15,8 +17,15 @@ export class ExerciseController {
   ) {}
 
   @Get()
-  async getAll(): Promise<ExerciseGetAllResponse> {
+  async getAll(): Promise<ExerciseResponse[]> {
     const result = this.queryBus.execute(new ExerciseGetAllQuery())
+    
+    return result;
+  }
+
+  @Get(':id')
+  async getById(@Param('id') id: Number): Promise<ExerciseResponse> {
+    const result = this.queryBus.execute(new ExerciseGetByIdQuery(id))
     
     return result;
   }
